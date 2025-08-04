@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import CustomerReviews from '../components/CustomerReviews';
-import GlobalReach from '../components/GlobalReach';
 import './Home.css';
 
 export default function Home() {
@@ -244,12 +242,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Customer Reviews Section */}
-      <CustomerReviews />
-
-      {/* Global Reach Section */}
-      <GlobalReach />
     </div>
   );
 }
