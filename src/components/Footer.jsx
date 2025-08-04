@@ -152,7 +152,7 @@ export default function Footer() {
         <div className="footer-container">
           <div className="footer-bottom-content">
             <div className="footer-legal">
-              <p>&copy; 2025 Akademi Crypto. All rights reserved.</p>
+              <p>&copy; 2025 Akademi Smart Home. All rights reserved.</p>
               <div className="legal-links">
                 <Link to="/privacy" className="legal-link">Privacy Policy</Link>
                 <Link to="/terms" className="legal-link">Terms of Use</Link>
