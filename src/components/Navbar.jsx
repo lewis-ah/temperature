@@ -32,7 +32,7 @@ export default function Navbar() {
           <div className="logo-container">
             <Logo size={40} className="logo-icon" />
             <div className="logo-text">
-              <span className="logo-main">Akademi Crypto</span>
+              <span className="logo-main">Akademi Smart Home</span>
               <span className="logo-sub">Smart Future</span>
             </div>
           </div>
