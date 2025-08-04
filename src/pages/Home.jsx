@@ -181,25 +181,37 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Partners Section */}
-      <section className="partners-section">
-        <div className="partners-content">
-          <p className="partners-label">Dipercaya oleh perusahaan terkemuka:</p>
-          <div className="partners-logos">
-            <div className="partner-logo">
-              <span>J.P. Morgan</span>
+      {/* Innovation Section */}
+      <section className="innovation-section">
+        <div className="innovation-content">
+          <div className="section-header">
+            <h2 className="section-title">
+              Inovasi <span className="gradient-text">Terdepan</span>
+            </h2>
+            <p className="section-subtitle">
+              Teknologi blockchain dan IoT terintegrasi untuk masa depan yang lebih baik
+            </p>
+          </div>
+          <div className="innovation-grid">
+            <div className="innovation-card">
+              <div className="innovation-icon">🔗</div>
+              <h3>Blockchain Integration</h3>
+              <p>Keamanan tingkat enterprise dengan teknologi blockchain terdesentralisasi untuk melindungi data IoT Anda.</p>
             </div>
-            <div className="partner-logo">
-              <span>Goldman Sachs</span>
+            <div className="innovation-card">
+              <div className="innovation-icon">🤖</div>
+              <h3>AI-Powered Analytics</h3>
+              <p>Analisis cerdas berbasis AI untuk optimasi konsumsi energi dan prediksi maintenance perangkat.</p>
             </div>
-            <div className="partner-logo">
-              <span>Google</span>
+            <div className="innovation-card">
+              <div className="innovation-icon">⚡</div>
+              <h3>Real-time Processing</h3>
+              <p>Pemrosesan data real-time dengan latensi ultra-rendah untuk respons sistem yang instantaneous.</p>
             </div>
-            <div className="partner-logo">
-              <span>Microsoft</span>
-            </div>
-            <div className="partner-logo">
-              <span>Tesla</span>
+            <div className="innovation-card">
+              <div className="innovation-icon">🌐</div>
+              <h3>Global Connectivity</h3>
+              <p>Konektivitas global melalui infrastruktur cloud terdistribusi di seluruh dunia.</p>
             </div>
           </div>
         </div>
