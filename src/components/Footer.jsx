@@ -78,7 +78,7 @@ export default function Footer() {
         <div className="footer-container">
           <div className="companies-header">
             <h3>Dipercaya oleh perusahaan terkemuka:</h3>
-            <p>Akademi Crypto bekerja sama dengan pemimpin industri global untuk memberikan solusi terbaik</p>
+            <p>Akademi Smart Home bekerja sama dengan pemimpin industri global untuk memberikan solusi terbaik</p>
           </div>
           <div className="companies-grid">
             {trustedCompanies.map((company, index) => (
@@ -104,7 +104,7 @@ export default function Footer() {
                 <div className="logo-container">
                   <Logo size={40} className="logo-icon" />
                   <div className="logo-text">
-                    <span className="logo-main">Akademi Crypto</span>
+                    <span className="logo-main">Akademi Smart Home</span>
                     <span className="logo-sub">Smart Future</span>
                   </div>
                 </div>
