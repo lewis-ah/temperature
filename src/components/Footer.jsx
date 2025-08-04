@@ -52,15 +52,15 @@ export default function Footer() {
   ];
 
   const trustedCompanies = [
-    { name: 'Google', logo: '🌐', description: 'Technology Partner' },
-    { name: 'Microsoft', logo: '🔷', description: 'Cloud Infrastructure' },
-    { name: 'Amazon', logo: '📦', description: 'IoT Platform' },
-    { name: 'Apple', logo: '🍎', description: 'HomeKit Integration' },
-    { name: 'Samsung', logo: '📱', description: 'Device Partner' },
-    { name: 'Intel', logo: '🔌', description: 'Hardware Solutions' },
-    { name: 'Tesla', logo: '⚡', description: 'Energy Systems' },
-    { name: 'IBM', logo: '💼', description: 'AI & Analytics' }
-  ];
+  { name: 'Google', logo: 'https://s.yimg.com/fz/api/res/1.2/I2ucT7v2aEn9pInvuzBnPQ--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtoPTI0MDtxPTgwO3c9MjQw/https://s.yimg.com/zb/imgv1/e76fa261-e45b-3514-872d-e8fa3a2473e5/t_500x300', description: 'Technology Partner' },
+  { name: 'Microsoft', logo: '🔷', description: 'Cloud Infrastructure' },
+  { name: 'Amazon', logo: '📦', description: 'IoT Platform' },
+  { name: 'Apple', logo: '🍎', description: 'HomeKit Integration' },
+  { name: 'Samsung', logo: '📱', description: 'Device Partner' },
+  { name: 'Intel', logo: '🔌', description: 'Hardware Solutions' },
+  { name: 'Tesla', logo: '⚡', description: 'Energy Systems' },
+  { name: 'IBM', logo: '💼', description: 'AI & Analytics' }
+];
 
   const socialLinks = [
     { name: 'Twitter', icon: '🐦', url: 'https://twitter.com' },
