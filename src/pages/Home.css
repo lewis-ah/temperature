@@ -859,3 +859,232 @@ body {
     --text-secondary: rgba(255, 255, 255, 0.9);
   }
 }
+
+/* Moving House Animation */
+.moving-house-animation {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  margin: 2rem 0;
+  overflow: hidden;
+}
+
+.house-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.house {
+  position: absolute;
+  font-size: 2rem;
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 4px 8px rgba(139, 92, 246, 0.3));
+}
+
+.house-1 {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.house-2 {
+  top: 60%;
+  left: 25%;
+  animation-delay: 0.5s;
+}
+
+.house-3 {
+  top: 30%;
+  left: 50%;
+  animation-delay: 1s;
+}
+
+.house-4 {
+  top: 70%;
+  left: 65%;
+  animation-delay: 1.5s;
+}
+
+.house-5 {
+  top: 40%;
+  left: 80%;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+.connection-network {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.connection-line {
+  position: absolute;
+  background: linear-gradient(90deg, transparent, #8b5cf6, transparent);
+  height: 2px;
+  border-radius: 1px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.line-1 {
+  top: 35%;
+  left: 15%;
+  width: 15%;
+  animation-delay: 0s;
+}
+
+.line-2 {
+  top: 65%;
+  left: 30%;
+  width: 20%;
+  animation-delay: 0.3s;
+}
+
+.line-3 {
+  top: 45%;
+  left: 55%;
+  width: 12%;
+  animation-delay: 0.6s;
+}
+
+.line-4 {
+  top: 75%;
+  left: 70%;
+  width: 18%;
+  animation-delay: 0.9s;
+}
+
+.line-5 {
+  top: 55%;
+  left: 85%;
+  width: 10%;
+  animation-delay: 1.2s;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scaleX(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+.floating-devices {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.device {
+  position: absolute;
+  font-size: 1.5rem;
+  animation: bounce 2s ease-in-out infinite;
+  filter: drop-shadow(0 2px 4px rgba(59, 130, 246, 0.3));
+}
+
+.device-1 {
+  top: 15%;
+  left: 20%;
+  animation-delay: 0.2s;
+}
+
+.device-2 {
+  top: 55%;
+  left: 35%;
+  animation-delay: 0.7s;
+}
+
+.device-3 {
+  top: 25%;
+  left: 60%;
+  animation-delay: 1.2s;
+}
+
+.device-4 {
+  top: 65%;
+  left: 75%;
+  animation-delay: 1.7s;
+}
+
+.device-5 {
+  top: 35%;
+  left: 90%;
+  animation-delay: 2.2s;
+}
+
+.device-6 {
+  top: 75%;
+  left: 5%;
+  animation-delay: 2.7s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-15px) scale(1.1);
+  }
+}
+
+/* Light theme support for moving house animation */
+[data-theme="light"] .house {
+  filter: drop-shadow(0 4px 8px rgba(59, 130, 246, 0.3));
+}
+
+[data-theme="light"] .connection-line {
+  background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+}
+
+[data-theme="light"] .device {
+  filter: drop-shadow(0 2px 4px rgba(59, 130, 246, 0.3));
+}
+
+/* Responsive design for moving house animation */
+@media (max-width: 768px) {
+  .moving-house-animation {
+    height: 150px;
+    margin: 1.5rem 0;
+  }
+  
+  .house {
+    font-size: 1.5rem;
+  }
+  
+  .device {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .moving-house-animation {
+    height: 120px;
+    margin: 1rem 0;
+  }
+  
+  .house {
+    font-size: 1.25rem;
+  }
+  
+  .device {
+    font-size: 1rem;
+  }
+}

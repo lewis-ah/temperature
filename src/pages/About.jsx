@@ -217,6 +217,197 @@ export default function About() {
         </div>
       </section>
 
+      {/* Company Timeline Section - New from smart-home-landing2.vercel.app */}
+      <section className="timeline-section">
+        <div className="container">
+          <div className="timeline-header">
+            <div className="timeline-badge">📅 JOURNEY</div>
+            <h2 className="timeline-title">Perjalanan Inovasi Kami</h2>
+            <p className="timeline-subtitle">
+              Dari ide sederhana hingga menjadi pionir teknologi smart home di Indonesia
+            </p>
+          </div>
+          
+          <div className="timeline-container">
+            <div className="timeline-item fade-in">
+              <div className="timeline-marker">2020</div>
+              <div className="timeline-content">
+                <h3>🚀 Awal Mula</h3>
+                <p>Dimulai dengan visi untuk membuat rumah lebih cerdas dan efisien. Tim kecil dengan passion besar untuk teknologi IoT.</p>
+              </div>
+            </div>
+            
+            <div className="timeline-item fade-in">
+              <div className="timeline-marker">2021</div>
+              <div className="timeline-content">
+                <h3>🔬 Research & Development</h3>
+                <p>Mengembangkan prototipe pertama dan melakukan riset mendalam tentang kebutuhan smart home di Indonesia.</p>
+              </div>
+            </div>
+            
+            <div className="timeline-item fade-in">
+              <div className="timeline-marker">2022</div>
+              <div className="timeline-content">
+                <h3>🎯 Peluncuran Beta</h3>
+                <p>Meluncurkan versi beta dengan 100 rumah pertama. Menerima feedback berharga dari early adopters.</p>
+              </div>
+            </div>
+            
+            <div className="timeline-item fade-in">
+              <div className="timeline-marker">2023</div>
+              <div className="timeline-content">
+                <h3>📈 Pertumbuhan Eksponensial</h3>
+                <p>Mencapai 10,000+ rumah terhubung. Memperkenalkan fitur AI dan blockchain integration.</p>
+              </div>
+            </div>
+            
+            <div className="timeline-item fade-in">
+              <div className="timeline-marker">2024</div>
+              <div className="timeline-content">
+                <h3>🌟 Market Leader</h3>
+                <p>Menjadi market leader smart home di Indonesia dengan 50,000+ rumah terhubung dan ekspansi ke 45+ negara.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Interactive Features Showcase - New from smart-home-landing2.vercel.app */}
+      <section className="features-showcase-section">
+        <div className="container">
+          <div className="features-showcase-header">
+            <div className="features-showcase-badge">⚡ FITUR UNGGULAN</div>
+            <h2 className="features-showcase-title">Teknologi Terdepan untuk Rumah Anda</h2>
+            <p className="features-showcase-subtitle">
+              Kombinasi sempurna antara AI, IoT, dan blockchain untuk pengalaman smart home terbaik
+            </p>
+          </div>
+          
+          <div className="features-showcase-grid">
+            <div className="feature-showcase-card fade-in">
+              <div className="feature-showcase-icon">🤖</div>
+              <h3>AI-Powered Automation</h3>
+              <p>Sistem AI yang belajar dari kebiasaan Anda dan mengotomatisasi rutinitas harian untuk efisiensi maksimal.</p>
+              <div className="feature-showcase-stats">
+                <div className="feature-stat">
+                  <span className="feature-stat-number">95%</span>
+                  <span className="feature-stat-label">Akurasi</span>
+                </div>
+                <div className="feature-stat">
+                  <span className="feature-stat-number">24/7</span>
+                  <span className="feature-stat-label">Monitoring</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="feature-showcase-card fade-in">
+              <div className="feature-showcase-icon">🔗</div>
+              <h3>Blockchain Security</h3>
+              <p>Keamanan tingkat enterprise dengan teknologi blockchain untuk melindungi data dan privasi Anda.</p>
+              <div className="feature-showcase-stats">
+                <div className="feature-stat">
+                  <span className="feature-stat-number">99.9%</span>
+                  <span className="feature-stat-label">Uptime</span>
+                </div>
+                <div className="feature-stat">
+                  <span className="feature-stat-number">256-bit</span>
+                  <span className="feature-stat-label">Encryption</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="feature-showcase-card fade-in">
+              <div className="feature-showcase-icon">🌐</div>
+              <h3>Global Connectivity</h3>
+              <p>Konektivitas global dengan infrastruktur cloud terdistribusi untuk akses dari mana saja di dunia.</p>
+              <div className="feature-showcase-stats">
+                <div className="feature-stat">
+                  <span className="feature-stat-number">45+</span>
+                  <span className="feature-stat-label">Negara</span>
+                </div>
+                <div className="feature-stat">
+                  <span className="feature-stat-number">&lt;1ms</span>
+                  <span className="feature-stat-label">Latency</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="feature-showcase-card fade-in">
+              <div className="feature-showcase-icon">📱</div>
+              <h3>Mobile-First Design</h3>
+              <p>Antarmuka mobile yang intuitif dan responsif untuk kontrol rumah dari smartphone Anda.</p>
+              <div className="feature-showcase-stats">
+                <div className="feature-stat">
+                  <span className="feature-stat-number">iOS</span>
+                  <span className="feature-stat-label">Android</span>
+                </div>
+                <div className="feature-stat">
+                  <span className="feature-stat-number">4.8★</span>
+                  <span className="feature-stat-label">Rating</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Customer Testimonials - New from smart-home-landing2.vercel.app */}
+      <section className="testimonials-section">
+        <div className="container">
+          <div className="testimonials-header">
+            <div className="testimonials-badge">💬 TESTIMONI</div>
+            <h2 className="testimonials-title">Apa Kata Pelanggan Kami</h2>
+            <p className="testimonials-subtitle">
+              Pengalaman nyata dari ribuan keluarga yang telah merasakan kemudahan smart home
+            </p>
+          </div>
+          
+          <div className="testimonials-grid">
+            <div className="testimonial-card fade-in">
+              <div className="testimonial-content">
+                <p>"Sistem smart home ini benar-benar mengubah cara kami hidup. Sekarang rumah kami lebih aman, efisien, dan nyaman."</p>
+              </div>
+              <div className="testimonial-author">
+                <div className="testimonial-avatar">👨‍👩‍👧‍👦</div>
+                <div className="testimonial-info">
+                  <h4>Budi Santoso</h4>
+                  <span>Keluarga Jakarta</span>
+                </div>
+                <div className="testimonial-rating">⭐⭐⭐⭐⭐</div>
+              </div>
+            </div>
+            
+            <div className="testimonial-card fade-in">
+              <div className="testimonial-content">
+                <p>"AI assistant-nya sangat pintar! Belajar dengan cepat dan sekarang benar-benar memahami kebiasaan keluarga kami."</p>
+              </div>
+              <div className="testimonial-author">
+                <div className="testimonial-avatar">👩‍💼</div>
+                <div className="testimonial-info">
+                  <h4>Sari Dewi</h4>
+                  <span>Profesional Surabaya</span>
+                </div>
+                <div className="testimonial-rating">⭐⭐⭐⭐⭐</div>
+              </div>
+            </div>
+            
+            <div className="testimonial-card fade-in">
+              <div className="testimonial-content">
+                <p>"Tagihan listrik turun 30% setelah menggunakan sistem ini. Investasi yang sangat worth it untuk jangka panjang."</p>
+              </div>
+              <div className="testimonial-author">
+                <div className="testimonial-avatar">👨‍💻</div>
+                <div className="testimonial-info">
+                  <h4>Rizki Pratama</h4>
+                  <span>Tech Entrepreneur</span>
+                </div>
+                <div className="testimonial-rating">⭐⭐⭐⭐⭐</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Interactive Tabs Section */}
       <section className="tabs-section">
         <div className="tabs-container">

@@ -80,6 +80,33 @@ export default function Home() {
             Sistem smart home yang cerdas, aman, dan terintegrasi penuh untuk gaya hidup yang<br />
             lebih mudah dan efisien. Kendalikan semuanya hanya dengan satu sentuhan.
           </p>
+          
+          {/* Moving House Animation */}
+          <div className="moving-house-animation">
+            <div className="house-container">
+              <div className="house house-1">🏠</div>
+              <div className="house house-2">🏠</div>
+              <div className="house house-3">🏠</div>
+              <div className="house house-4">🏠</div>
+              <div className="house house-5">🏠</div>
+            </div>
+            <div className="connection-network">
+              <div className="connection-line line-1"></div>
+              <div className="connection-line line-2"></div>
+              <div className="connection-line line-3"></div>
+              <div className="connection-line line-4"></div>
+              <div className="connection-line line-5"></div>
+            </div>
+            <div className="floating-devices">
+              <div className="device device-1">💡</div>
+              <div className="device device-2">🔒</div>
+              <div className="device device-3">🌡️</div>
+              <div className="device device-4">📱</div>
+              <div className="device device-5">🔋</div>
+              <div className="device device-6">📡</div>
+            </div>
+          </div>
+          
           <div className="hero-buttons">
             <button className="cta-button primary">
               <span>Mulai Petualangan Anda</span>
