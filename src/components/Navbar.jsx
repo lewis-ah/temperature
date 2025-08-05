@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Logo from './Logo';
+import ThemeToggle from './ThemeToggle';
 import './Navbar.css';
 
 export default function Navbar() {
@@ -52,6 +53,11 @@ export default function Navbar() {
           ))}
         </div>
 
+        {/* Theme Toggle */}
+        <div className="navbar-theme">
+          <ThemeToggle />
+        </div>
+
         {/* CTA Button */}
         <div className="navbar-cta">
           <button className="cta-button">
@@ -88,6 +94,9 @@ export default function Navbar() {
               <span className="link-text">{item.name}</span>
             </Link>
           ))}
+          <div className="mobile-theme">
+            <ThemeToggle />
+          </div>
           <div className="mobile-cta">
             <button className="cta-button mobile">
               <span>Get Started</span>
