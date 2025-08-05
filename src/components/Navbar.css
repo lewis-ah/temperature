@@ -1,16 +1,4 @@
 /* Navbar CSS inspired by Ethereum.org design */
-:root {
-  --navbar-bg: rgba(15, 15, 35, 0.95);
-  --navbar-border: rgba(255, 255, 255, 0.1);
-  --navbar-text: #ffffff;
-  --navbar-text-secondary: rgba(255, 255, 255, 0.8);
-  --navbar-accent: #627eea;
-  --navbar-accent-hover: #8b5cf6;
-  --navbar-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  --navbar-radius: 16px;
-  --navbar-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .navbar {
   position: fixed;
   top: 0;
@@ -23,8 +11,32 @@
   transition: var(--navbar-transition);
 }
 
+/* Light mode navbar styles */
+[data-theme="light"] .navbar {
+  --navbar-bg: rgba(248, 250, 252, 0.95);
+  --navbar-border: rgba(0, 0, 0, 0.1);
+  --navbar-text: #1e293b;
+  --navbar-text-secondary: rgba(30, 41, 59, 0.8);
+  --navbar-accent: #3b82f6;
+  --navbar-accent-hover: #6366f1;
+  --navbar-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --navbar-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dark mode navbar styles */
+[data-theme="dark"] .navbar {
+  --navbar-bg: rgba(15, 23, 42, 0.95);
+  --navbar-border: rgba(255, 255, 255, 0.1);
+  --navbar-text: #ffffff;
+  --navbar-text-secondary: rgba(255, 255, 255, 0.8);
+  --navbar-accent: #60a5fa;
+  --navbar-accent-hover: #818cf8;
+  --navbar-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --navbar-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .navbar-scrolled {
-  background: rgba(15, 15, 35, 0.98);
+  background: var(--navbar-bg);
   box-shadow: var(--navbar-shadow);
 }
 
@@ -149,6 +161,13 @@
   font-size: 0.95rem;
 }
 
+/* Theme Toggle */
+.navbar-theme {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
 /* CTA Button */
 .navbar-cta {
   display: flex;
@@ -269,6 +288,14 @@
   background: rgba(98, 126, 234, 0.1);
 }
 
+.mobile-theme {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--navbar-border);
+  display: flex;
+  justify-content: center;
+}
+
 .mobile-cta {
   margin-top: 1rem;
   padding-top: 1rem;
@@ -298,6 +325,7 @@
   }
   
   .navbar-menu,
+  .navbar-theme,
   .navbar-cta {
     display: none;
   }

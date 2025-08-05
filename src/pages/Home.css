@@ -1,17 +1,18 @@
 /* CSS Variables inspired by Ethereum design system */
-:root {
-  --primary-bg: #0f0f23;
-  --secondary-bg: #1a1a3a;
-  --card-bg: rgba(255, 255, 255, 0.05);
-  --card-border: rgba(255, 255, 255, 0.1);
-  --text-primary: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --accent-blue: #627eea;
-  --accent-purple: #8b5cf6;
-  --accent-orange: #ff6b35;
+/* Light mode styles */
+[data-theme="light"] {
+  --primary-bg: #f8fafc;
+  --secondary-bg: #f1f5f9;
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --card-border: rgba(0, 0, 0, 0.1);
+  --text-primary: #1e293b;
+  --text-secondary: rgba(30, 41, 59, 0.7);
+  --accent-blue: #3b82f6;
+  --accent-purple: #6366f1;
+  --accent-orange: #f59e0b;
   --accent-green: #10b981;
-  --gradient-primary: linear-gradient(135deg, #627eea 0%, #8b5cf6 100%);
-  --gradient-secondary: linear-gradient(135deg, #ff6b35 0%, #f59e0b 100%);
+  --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+  --gradient-secondary: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
   --blur-amount: 20px;
   --border-radius: 16px;
   --border-radius-large: 24px;
@@ -19,7 +20,31 @@
   --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+/* Dark mode styles */
+[data-theme="dark"] {
+  --primary-bg: #0f0f23;
+  --secondary-bg: #1a1a3a;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --accent-blue: #60a5fa;
+  --accent-purple: #818cf8;
+  --accent-orange: #fbbf24;
+  --accent-green: #34d399;
+  --gradient-primary: linear-gradient(135deg, #60a5fa 0%, #818cf8 100%);
+  --gradient-secondary: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  --blur-amount: 20px;
+  --border-radius: 16px;
+  --border-radius-large: 24px;
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
 }
 
 * {
