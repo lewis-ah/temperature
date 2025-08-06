@@ -1,68 +1,101 @@
-/* Temperature Page CSS */
+/* Temperature Page CSS with Dark/Light Mode Support */
+:root {
+  --temp-bg: #f8fafc;
+  --temp-card-bg: #ffffff;
+  --temp-text: #1e293b;
+  --temp-text-secondary: #64748b;
+  --temp-border: #e2e8f0;
+  --temp-accent: #3b82f6;
+  --temp-accent-hover: #2563eb;
+  --temp-success: #10b981;
+  --temp-warning: #f59e0b;
+  --temp-danger: #ef4444;
+  --temp-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --temp-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --temp-bg: #0f172a;
+  --temp-card-bg: #1e293b;
+  --temp-text: #f1f5f9;
+  --temp-text-secondary: #94a3b8;
+  --temp-border: #334155;
+  --temp-accent: #60a5fa;
+  --temp-accent-hover: #3b82f6;
+  --temp-success: #34d399;
+  --temp-warning: #fbbf24;
+  --temp-danger: #f87171;
+  --temp-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  --temp-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
 .temperature-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--temp-bg);
   padding: 2rem 0;
+  transition: background-color 0.3s ease;
 }
 
 .temperature-header {
   text-align: center;
   padding: 3rem 2rem;
-  color: white;
+  color: var(--temp-text);
 }
 
 .header-badge {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--temp-accent);
+  color: white;
   padding: 0.5rem 1rem;
   border-radius: 25px;
   font-size: 0.875rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  backdrop-filter: blur(10px);
+  box-shadow: var(--temp-shadow);
 }
 
 .header-title {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: var(--temp-text);
 }
 
 .header-subtitle {
   font-size: 1.125rem;
-  opacity: 0.9;
+  color: var(--temp-text-secondary);
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
 }
 
 .temperature-main {
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
 .temperature-card {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 20px;
-  padding: 3rem;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(20px);
-  margin-bottom: 2rem;
+  background: var(--temp-card-bg);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--temp-shadow-lg);
+  border: 1px solid var(--temp-border);
+  transition: all 0.3s ease;
 }
 
 .loading-state,
 .error-state {
   text-align: center;
   padding: 3rem;
+  color: var(--temp-text);
 }
 
 .loading-spinner {
   width: 50px;
   height: 50px;
-  border: 4px solid #f3f3f3;
-  border-top: 4px solid #667eea;
+  border: 4px solid var(--temp-border);
+  border-top: 4px solid var(--temp-accent);
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin: 0 auto 1rem;
@@ -76,10 +109,11 @@
 .error-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
+  color: var(--temp-danger);
 }
 
 .retry-button {
-  background: #667eea;
+  background: var(--temp-accent);
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -88,107 +122,403 @@
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 1rem;
+  box-shadow: var(--temp-shadow);
 }
 
 .retry-button:hover {
-  background: #5a67d8;
+  background: var(--temp-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--temp-shadow-lg);
+}
+
+/* Temperature Display */
+.temp-display {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2.5rem;
+  background: var(--temp-card-bg);
+  border-radius: 12px;
+  border: 2px solid var(--temp-border);
+  box-shadow: var(--temp-shadow);
+  transition: all 0.3s ease;
+}
+
+.temp-display:hover {
+  box-shadow: var(--temp-shadow-lg);
   transform: translateY(-2px);
 }
 
-.temperature-display {
-  text-align: center;
-  margin-bottom: 3rem;
+.temp-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.8;
 }
 
-.temperature-value {
-  font-size: 4rem;
+.temp-value {
+  font-size: 3.5rem;
   font-weight: 700;
-  color: #2d3748;
   margin-bottom: 0.5rem;
+  color: var(--temp-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-.temperature-unit {
-  font-size: 1.5rem;
-  color: #718096;
+.temp-unit {
+  font-size: 1.25rem;
+  color: var(--temp-text-secondary);
   margin-left: 0.5rem;
+  font-weight: 500;
 }
 
-.temperature-status {
+.temp-status {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 25px;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  background: var(--temp-accent);
+  color: white;
+  box-shadow: var(--temp-shadow);
 }
 
-.temperature-description {
-  font-size: 1.125rem;
-  color: #4a5568;
-  margin-bottom: 2rem;
-}
-
-.temperature-info {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.info-card {
-  background: #f7fafc;
-  padding: 1.5rem;
-  border-radius: 15px;
-  text-align: center;
-  border: 1px solid #e2e8f0;
-}
-
-.info-icon {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.info-title {
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #2d3748;
-  margin-bottom: 0.5rem;
-}
-
-.info-value {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #667eea;
-}
-
-.comfort-meter {
-  background: #f7fafc;
+/* Comfort Section */
+.comfort-section {
+  background: var(--temp-card-bg);
   padding: 2rem;
-  border-radius: 15px;
-  margin-top: 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  border: 1px solid var(--temp-border);
+  box-shadow: var(--temp-shadow);
+  transition: all 0.3s ease;
+}
+
+.comfort-section:hover {
+  box-shadow: var(--temp-shadow-lg);
+}
+
+.comfort-section h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--temp-text);
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
 .comfort-bar {
   width: 100%;
-  height: 20px;
-  background: #e2e8f0;
-  border-radius: 10px;
+  height: 12px;
+  background: var(--temp-border);
+  border-radius: 6px;
   overflow: hidden;
   margin: 1rem 0;
 }
 
 .comfort-fill {
   height: 100%;
-  background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #0abde3);
   transition: width 0.5s ease;
+  border-radius: 6px;
 }
 
-.last-updated {
+.comfort-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.comfort-level {
+  font-weight: 600;
+  color: var(--temp-text);
+}
+
+.comfort-percentage {
+  font-weight: 700;
+  color: var(--temp-accent);
+}
+
+.comfort-description {
   text-align: center;
-  color: #718096;
+  color: var(--temp-text-secondary);
+  font-size: 0.95rem;
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+/* Temperature Details */
+.temp-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--temp-card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--temp-border);
+  box-shadow: var(--temp-shadow);
+  transition: all 0.3s ease;
+}
+
+.detail-item:hover {
+  box-shadow: var(--temp-shadow-lg);
+  transform: translateY(-2px);
+}
+
+.detail-icon {
+  font-size: 1.25rem;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--temp-accent);
+  color: white;
+  border-radius: 10px;
+  box-shadow: var(--temp-shadow);
+}
+
+.detail-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.detail-label {
   font-size: 0.875rem;
+  color: var(--temp-text-secondary);
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.detail-value {
+  font-weight: 600;
+  color: var(--temp-text);
+  font-size: 1rem;
+}
+
+/* Action Buttons */
+.temp-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
   margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.refresh-button,
+.history-button {
+  padding: 0.875rem 1.75rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  box-shadow: var(--temp-shadow);
+}
+
+.refresh-button {
+  background: var(--temp-accent);
+  color: white;
+}
+
+.refresh-button:hover {
+  background: var(--temp-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--temp-shadow-lg);
+}
+
+.history-button {
+  background: var(--temp-card-bg);
+  color: var(--temp-text);
+  border: 1px solid var(--temp-border);
+}
+
+.history-button:hover {
+  background: var(--temp-border);
+  transform: translateY(-2px);
+  box-shadow: var(--temp-shadow-lg);
+}
+
+/* Temperature Guide Section - Ethereum.org Style */
+.temperature-guide {
+  max-width: 1200px;
+  margin: 4rem auto 2rem;
+  padding: 0 2rem;
+}
+
+.temperature-guide h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: var(--temp-text);
+  position: relative;
+}
+
+.temperature-guide h2::before {
+  content: "PANDUAN SUHU";
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--temp-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.guide-item {
+  background: var(--temp-card-bg);
+  border: 1px solid var(--temp-border);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: var(--temp-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.guide-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--temp-shadow-lg);
+  border-color: var(--temp-accent);
+}
+
+.guide-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--temp-accent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.guide-item:hover::before {
+  opacity: 1;
+}
+
+.guide-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.guide-item h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--temp-text);
+}
+
+.guide-item p {
+  font-size: 1rem;
+  color: var(--temp-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Temperature-specific colors */
+.guide-item.cold {
+  border-left: 4px solid #3b82f6;
+}
+
+.guide-item.cold .guide-icon {
+  color: #3b82f6;
+}
+
+.guide-item.cool {
+  border-left: 4px solid #10b981;
+}
+
+.guide-item.cool .guide-icon {
+  color: #10b981;
+}
+
+.guide-item.comfortable {
+  border-left: 4px solid #f59e0b;
+}
+
+.guide-item.comfortable .guide-icon {
+  color: #f59e0b;
+}
+
+.guide-item.warm {
+  border-left: 4px solid #f97316;
+}
+
+.guide-item.warm .guide-icon {
+  color: #f97316;
+}
+
+.guide-item.hot {
+  border-left: 4px solid #ef4444;
+}
+
+.guide-item.hot .guide-icon {
+  color: #ef4444;
+}
+
+/* Dark mode adjustments for temperature colors */
+[data-theme="dark"] .guide-item.cold {
+  border-left: 4px solid #60a5fa;
+}
+
+[data-theme="dark"] .guide-item.cold .guide-icon {
+  color: #60a5fa;
+}
+
+[data-theme="dark"] .guide-item.cool {
+  border-left: 4px solid #34d399;
+}
+
+[data-theme="dark"] .guide-item.cool .guide-icon {
+  color: #34d399;
+}
+
+[data-theme="dark"] .guide-item.comfortable {
+  border-left: 4px solid #fbbf24;
+}
+
+[data-theme="dark"] .guide-item.comfortable .guide-icon {
+  color: #fbbf24;
+}
+
+[data-theme="dark"] .guide-item.warm {
+  border-left: 4px solid #fb923c;
+}
+
+[data-theme="dark"] .guide-item.warm .guide-icon {
+  color: #fb923c;
+}
+
+[data-theme="dark"] .guide-item.hot {
+  border-left: 4px solid #f87171;
+}
+
+[data-theme="dark"] .guide-item.hot .guide-icon {
+  color: #f87171;
 }
 
 /* Responsive Design */
@@ -217,6 +547,23 @@
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+  
+  .temperature-guide {
+    padding: 0 1rem;
+  }
+  
+  .temperature-guide h2 {
+    font-size: 2rem;
+  }
+  
+  .guide-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .guide-item {
+    padding: 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -229,6 +576,18 @@
   }
   
   .temperature-value {
+    font-size: 2.5rem;
+  }
+  
+  .temperature-guide h2 {
+    font-size: 1.75rem;
+  }
+  
+  .guide-item {
+    padding: 1.25rem;
+  }
+  
+  .guide-icon {
     font-size: 2.5rem;
   }
 } 

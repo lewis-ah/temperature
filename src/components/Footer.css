@@ -15,6 +15,22 @@
   --footer-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Light mode variables */
+[data-theme="light"] {
+  --footer-bg: #f8fafc;
+  --footer-bg-secondary: #f1f5f9;
+  --footer-border: rgba(0, 0, 0, 0.1);
+  --footer-text: #1e293b;
+  --footer-text-secondary: rgba(30, 41, 59, 0.7);
+  --footer-text-muted: rgba(30, 41, 59, 0.5);
+  --footer-accent: #3b82f6;
+  --footer-accent-hover: #6366f1;
+  --footer-card-bg: rgba(0, 0, 0, 0.05);
+  --footer-card-border: rgba(0, 0, 0, 0.1);
+  --footer-gradient: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+  --footer-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
 .footer {
   background: var(--footer-bg);
   color: var(--footer-text);
@@ -99,6 +115,10 @@
   object-fit: contain;
   filter: brightness(0) invert(1);
   transition: var(--footer-transition);
+}
+
+[data-theme="light"] .company-logo-img {
+  filter: brightness(0) invert(0);
 }
 
 .company-card:hover .company-logo-img {
