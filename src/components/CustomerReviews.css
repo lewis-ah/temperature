@@ -13,7 +13,7 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle at 30% 30%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+  background: var(--about-bg);
   animation: float 20s infinite linear;
 }
 

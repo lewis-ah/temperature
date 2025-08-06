@@ -473,6 +473,8 @@ body {
   transform: translateY(-8px);
   border-color: var(--accent-blue);
   box-shadow: var(--shadow-lg);
+  background: var(--card-bg); /* pastikan tetap solid, tidak transparan */
+  opacity: 1; /* pastikan tidak menghilang */
 }
 
 .feature-card.highlighted {
