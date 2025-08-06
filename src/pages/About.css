@@ -1,6 +1,6 @@
 /* About Page Styles with Dark/Light Mode Support */
 :root {
-  --about-bg: #f8fafc;
+  --about-bg: #f0f8ff;
   --about-card-bg: #ffffff;
   --about-text: #1e293b;
   --about-text-secondary: #64748b;
@@ -13,6 +13,7 @@
   --about-gradient: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
   --about-gradient-hover: linear-gradient(135deg, #7c3aed 0%, #9333ea 100%);
   --about-title-gradient: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  --ai-card-bg: #f8fafc;
 }
 
 [data-theme="dark"] {
@@ -29,6 +30,7 @@
   --about-gradient: linear-gradient(135deg, #a855f7 0%, #c084fc 100%);
   --about-gradient-hover: linear-gradient(135deg, #9333ea 0%, #a855f7 100%);
   --about-title-gradient: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+  --ai-card-bg: #1e293b;
 }
 
 .about-container {
@@ -167,14 +169,15 @@
 
 .secondary-btn {
   background: transparent;
-  color: white;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: var(--about-text);
+  border: 2px solid var(--about-border);
   backdrop-filter: blur(10px);
 }
 
 .secondary-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.5);
+  background: var(--about-gradient);
+  color: white;
+  border-color: var(--about-accent);
   transform: translateY(-2px);
   box-shadow: var(--about-shadow-lg);
 }
@@ -248,7 +251,7 @@
 /* Stats Section */
 .stats-section {
   padding: 4rem 2rem;
-  background: var(--about-card-bg);
+  background: var(--about-bg);
   border-top: 1px solid var(--about-border);
 }
 
@@ -404,11 +407,11 @@
 }
 
 .tab-content-container {
-  background: var(--card-bg);
+  background: var(--about-card-bg);
   border-radius: 16px;
   padding: 3rem;
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--border-color);
+  box-shadow: var(--about-shadow-lg);
+  border: 1px solid var(--about-border);
 }
 
 .tab-content-container h2 {
@@ -445,15 +448,18 @@
 
 .mission-card, .vision-card {
   padding: 2rem;
-  background: var(--tertiary-bg);
+  background: var(--about-card-bg);
   border-radius: 12px;
   text-align: center;
   transition: all 0.3s ease;
+  border: 1px solid var(--about-border);
+  box-shadow: var(--about-shadow);
 }
 
 .mission-card:hover, .vision-card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--about-shadow-lg);
+  border-color: var(--about-accent);
 }
 
 .card-icon {
@@ -481,16 +487,19 @@
 
 .value-card {
   padding: 1.5rem;
-  background: var(--tertiary-bg);
+  background: var(--about-card-bg);
   border-radius: 12px;
   text-align: center;
   transition: all 0.3s ease;
   animation: fadeInUp 0.6s ease both;
+  border: 1px solid var(--about-border);
+  box-shadow: var(--about-shadow);
 }
 
 .value-card:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--about-shadow-lg);
+  border-color: var(--about-accent);
 }
 
 .value-icon {
@@ -523,15 +532,18 @@
 
 .tech-card {
   padding: 1.5rem;
-  background: var(--tertiary-bg);
+  background: var(--about-card-bg);
   border-radius: 12px;
   transition: all 0.3s ease;
   animation: fadeInUp 0.6s ease both;
+  border: 1px solid var(--about-border);
+  box-shadow: var(--about-shadow);
 }
 
 .tech-card:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--about-shadow-lg);
+  border-color: var(--about-accent);
 }
 
 .tech-icon {
@@ -556,7 +568,7 @@
 }
 
 .tech-features li {
-  color: var(--text-muted);
+  color: var(--about-text-secondary);
   font-size: 0.85rem;
   margin-bottom: 0.25rem;
   padding-left: 1rem;
@@ -580,16 +592,19 @@
 
 .team-card {
   padding: 1.5rem;
-  background: var(--tertiary-bg);
+  background: var(--about-card-bg);
   border-radius: 12px;
   text-align: center;
   transition: all 0.3s ease;
   animation: fadeInUp 0.6s ease both;
+  border: 1px solid var(--about-border);
+  box-shadow: var(--about-shadow);
 }
 
 .team-card:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--about-shadow-lg);
+  border-color: var(--about-accent);
 }
 
 .member-avatar {
@@ -598,12 +613,15 @@
 }
 
 .team-card h4 {
-  color: var(--text-primary);
+  background: var(--about-title-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 0.25rem;
 }
 
 .member-role {
-  color: var(--accent-primary);
+  color: var(--about-accent);
   font-size: 0.9rem;
   font-weight: 500;
   margin-bottom: 1rem;
@@ -611,14 +629,14 @@
 }
 
 .team-card p {
-  color: var(--text-secondary);
+  color: var(--about-text-secondary);
   font-size: 0.85rem;
 }
 
 /* CTA Section */
 .about-cta {
   padding: 4rem 2rem;
-  background: var(--gradient-secondary);
+  background: var(--about-bg);
   text-align: center;
 }
 
@@ -628,12 +646,15 @@
 }
 
 .about-cta h2 {
-  color: var(--text-primary);
+  background: var(--about-title-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 1rem;
 }
 
 .about-cta p {
-  color: var(--text-secondary);
+  color: var(--about-text-secondary);
   margin-bottom: 2rem;
   font-size: 1.1rem;
 }
@@ -805,7 +826,7 @@
 /* Timeline Section - New from smart-home-landing2.vercel.app */
 .timeline-section {
   padding: 6rem 0;
-  background: linear-gradient(135deg, #0f0f23 0%, #1a1a3a 100%);
+  background: var(--about-bg);
   position: relative;
 }
 
@@ -846,13 +867,16 @@
 .timeline-title {
   font-size: 3rem;
   font-weight: 800;
-  color: #ffffff;
+  background: var(--about-title-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 1.5rem;
 }
 
 .timeline-subtitle {
   font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--about-text-secondary);
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
@@ -940,7 +964,7 @@
 /* Features Showcase Section */
 .features-showcase-section {
   padding: 6rem 0;
-  background: linear-gradient(135deg, #1a1a3a 0%, #0f0f23 100%);
+  background: var(--about-bg);
 }
 
 .features-showcase-header {
@@ -966,13 +990,16 @@
 .features-showcase-title {
   font-size: 3rem;
   font-weight: 800;
-  color: #ffffff;
+  background: var(--about-title-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 1.5rem;
 }
 
 .features-showcase-subtitle {
   font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--about-text-secondary);
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
@@ -987,11 +1014,11 @@
 }
 
 .feature-showcase-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--about-card-bg);
+  border: 1px solid var(--about-border);
   border-radius: 20px;
   padding: 2.5rem;
-  backdrop-filter: blur(10px);
+  box-shadow: var(--about-shadow);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -1010,9 +1037,10 @@
 }
 
 .feature-showcase-card:hover {
-  background: rgba(139, 92, 246, 0.1);
-  border-color: rgba(139, 92, 246, 0.3);
+  background: var(--about-card-bg);
+  border-color: var(--about-accent);
   transform: translateY(-8px);
+  box-shadow: var(--about-shadow-lg);
 }
 
 .feature-showcase-card:hover::before {
@@ -1028,12 +1056,15 @@
 .feature-showcase-card h3 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #ffffff;
+  background: var(--about-title-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 1rem;
 }
 
 .feature-showcase-card p {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--about-text-secondary);
   line-height: 1.6;
   margin-bottom: 2rem;
 }
@@ -1065,7 +1096,7 @@
 /* Testimonials Section */
 .testimonials-section {
   padding: 6rem 0;
-  background: linear-gradient(135deg, #0f0f23 0%, #1a1a3a 100%);
+  background: var(--about-bg);
   position: relative;
 }
 
@@ -1106,13 +1137,16 @@
 .testimonials-title {
   font-size: 3rem;
   font-weight: 800;
-  color: #ffffff;
+  background: var(--about-title-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 1.5rem;
 }
 
 .testimonials-subtitle {
   font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--about-text-secondary);
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
@@ -1129,18 +1163,19 @@
 }
 
 .testimonial-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--about-card-bg);
+  border: 1px solid var(--about-border);
   border-radius: 20px;
   padding: 2rem;
-  backdrop-filter: blur(10px);
+  box-shadow: var(--about-shadow);
   transition: all 0.3s ease;
 }
 
 .testimonial-card:hover {
-  background: rgba(139, 92, 246, 0.1);
-  border-color: rgba(139, 92, 246, 0.3);
+  background: var(--about-card-bg);
+  border-color: var(--about-accent);
   transform: translateY(-4px);
+  box-shadow: var(--about-shadow-lg);
 }
 
 .testimonial-content {
@@ -1148,7 +1183,7 @@
 }
 
 .testimonial-content p {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--about-text);
   line-height: 1.6;
   font-style: italic;
   font-size: 1.125rem;

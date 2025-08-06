@@ -1,3 +1,4 @@
+import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { ThemeProvider } from './context/ThemeContext'
 import Navbar from './components/Navbar'
@@ -7,8 +8,15 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Temperature from './pages/Temperature'
 import './App.css'
+import './components/ScrollReveal.css'
+import { initScrollReveal } from './utils/scrollReveal'
 
 export default function App() {
+  // Initialize scroll reveal
+  React.useEffect(() => {
+    initScrollReveal();
+  }, []);
+
   return (
     <ThemeProvider>
       <div className="app">

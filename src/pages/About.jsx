@@ -104,7 +104,7 @@ export default function About() {
               { icon: '🔒', title: 'Keamanan & Privasi', desc: 'Mengutamakan keamanan data dan privasi pengguna dengan teknologi enkripsi tingkat tinggi.' },
               { icon: '♻️', title: 'Keberlanjutan', desc: 'Berkomitmen terhadap lingkungan dengan solusi smart home yang ramah lingkungan.' }
             ].map((value, index) => (
-              <div key={index} className="value-card" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div key={index} className={`value-card scroll-reveal-stagger scroll-reveal-delay-${index + 1}`}>
                 <div className="value-icon">{value.icon}</div>
                 <h4>{value.title}</h4>
                 <p>{value.desc}</p>
@@ -125,7 +125,7 @@ export default function About() {
               { icon: '💎', name: 'Gemini Pro', desc: 'Multi-modal AI untuk analisis visual dan audio yang komprehensif dalam sistem smart home.', features: ['Multi-modal AI', 'Visual Analysis', 'Audio Processing'] },
               { icon: '🛡️', name: 'Security Intelligence', desc: 'AI-powered security dengan tingkat akurasi 99.5% untuk perlindungan rumah yang maksimal.', features: ['AI Security', '99.5% Accuracy', 'Real-time Protection'] }
             ].map((tech, index) => (
-              <div key={index} className="tech-card" style={{ animationDelay: `${index * 0.15}s` }}>
+              <div key={index} className={`tech-card scroll-reveal-scale scroll-reveal-delay-${index + 1}`}>
                 <div className="tech-icon">{tech.icon}</div>
                 <h4>{tech.name}</h4>
                 <p>{tech.desc}</p>
@@ -151,7 +151,7 @@ export default function About() {
               { name: 'Maria Garcia', role: 'VP of Engineering', avatar: '👩‍🔬', desc: 'Expert dalam scalable architecture dan cloud infrastructure untuk smart home solutions.' },
               { name: 'David Kim', role: 'Head of AI Research', avatar: '👨‍🔬', desc: 'Leading research dalam AI ethics dan responsible AI development untuk smart home applications.' }
             ].map((member, index) => (
-              <div key={index} className="team-card" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div key={index} className={`team-card scroll-reveal-bounce scroll-reveal-delay-${index + 1}`}>
                 <div className="member-avatar">{member.avatar}</div>
                 <h4>{member.name}</h4>
                 <span className="member-role">{member.role}</span>
@@ -169,28 +169,28 @@ export default function About() {
       {/* Hero Section */}
       <section className="about-hero">
         <div className="hero-content">
-          <div className="hero-badge">
+          <div className="hero-badge scroll-reveal-fast">
             🌟 Tentang Platform Smart Home Terdepan di Indonesia
           </div>
-          <h1 className="hero-title">
+          <h1 className="hero-title scroll-reveal">
             Tentang <span className="gradient-text">Kami</span>
           </h1>
-          <p className="hero-subtitle">
+          <p className="hero-subtitle scroll-reveal scroll-reveal-delay-1">
             Kami adalah perusahaan teknologi smart home yang menggunakan AI tingkat tinggi untuk 
             memberikan solusi rumah pintar terbaik. Dengan jangkauan global dan distribusi regional 
             yang kuat, kami telah menjadi market unggulan di bidang smart home.
           </p>
-          <div className="hero-cta">
+          <div className="hero-cta scroll-reveal scroll-reveal-delay-2">
             <button className="primary-btn">Pelajari Lebih Lanjut</button>
             <button className="secondary-btn">Hubungi Kami</button>
           </div>
         </div>
-        <div className="hero-visual">
+        <div className="hero-visual scroll-reveal-right scroll-reveal-delay-3">
           <div className="floating-elements">
-            <div className="floating-card">🏠</div>
-            <div className="floating-card">🤖</div>
-            <div className="floating-card">⚡</div>
-            <div className="floating-card">🔒</div>
+            <div className="floating-card scroll-reveal-zoom scroll-reveal-delay-1">🏠</div>
+            <div className="floating-card scroll-reveal-zoom scroll-reveal-delay-2">🤖</div>
+            <div className="floating-card scroll-reveal-zoom scroll-reveal-delay-3">⚡</div>
+            <div className="floating-card scroll-reveal-zoom scroll-reveal-delay-4">🔒</div>
           </div>
         </div>
       </section>
@@ -198,19 +198,19 @@ export default function About() {
       {/* Stats Section */}
       <section className="stats-section">
         <div className="stats-grid">
-          <div className="stat-card">
+          <div className="stat-card scroll-reveal-stagger scroll-reveal-delay-1">
             <div className="stat-number">{animatedStats.customers.toLocaleString()}+</div>
             <div className="stat-label">Rumah Terpasang</div>
           </div>
-          <div className="stat-card">
+          <div className="stat-card scroll-reveal-stagger scroll-reveal-delay-2">
             <div className="stat-number">{animatedStats.countries}+</div>
             <div className="stat-label">Negara</div>
           </div>
-          <div className="stat-card">
+          <div className="stat-card scroll-reveal-stagger scroll-reveal-delay-3">
             <div className="stat-number">{animatedStats.satisfaction}%</div>
             <div className="stat-label">Kepuasan Pelanggan</div>
           </div>
-          <div className="stat-card">
+          <div className="stat-card scroll-reveal-stagger scroll-reveal-delay-4">
             <div className="stat-number">{animatedStats.years}+</div>
             <div className="stat-label">Tahun Pengalaman</div>
           </div>
@@ -220,7 +220,7 @@ export default function About() {
       {/* Company Timeline Section - New from smart-home-landing2.vercel.app */}
       <section className="timeline-section">
         <div className="container">
-          <div className="timeline-header">
+          <div className="timeline-header scroll-reveal">
             <div className="timeline-badge">📅 JOURNEY</div>
             <h2 className="timeline-title">Perjalanan Inovasi Kami</h2>
             <p className="timeline-subtitle">
@@ -229,7 +229,7 @@ export default function About() {
           </div>
           
           <div className="timeline-container">
-            <div className="timeline-item fade-in">
+            <div className="timeline-item scroll-reveal-left scroll-reveal-delay-1">
               <div className="timeline-marker">2020</div>
               <div className="timeline-content">
                 <h3>🚀 Awal Mula</h3>
@@ -237,7 +237,7 @@ export default function About() {
               </div>
             </div>
             
-            <div className="timeline-item fade-in">
+            <div className="timeline-item scroll-reveal-right scroll-reveal-delay-2">
               <div className="timeline-marker">2021</div>
               <div className="timeline-content">
                 <h3>🔬 Research & Development</h3>
@@ -245,7 +245,7 @@ export default function About() {
               </div>
             </div>
             
-            <div className="timeline-item fade-in">
+            <div className="timeline-item scroll-reveal-left scroll-reveal-delay-3">
               <div className="timeline-marker">2022</div>
               <div className="timeline-content">
                 <h3>🎯 Peluncuran Beta</h3>
@@ -253,7 +253,7 @@ export default function About() {
               </div>
             </div>
             
-            <div className="timeline-item fade-in">
+            <div className="timeline-item scroll-reveal-right scroll-reveal-delay-4">
               <div className="timeline-marker">2023</div>
               <div className="timeline-content">
                 <h3>📈 Pertumbuhan Eksponensial</h3>
@@ -261,7 +261,7 @@ export default function About() {
               </div>
             </div>
             
-            <div className="timeline-item fade-in">
+            <div className="timeline-item scroll-reveal-left scroll-reveal-delay-5">
               <div className="timeline-marker">2024</div>
               <div className="timeline-content">
                 <h3>🌟 Market Leader</h3>
@@ -275,7 +275,7 @@ export default function About() {
       {/* Interactive Features Showcase - New from smart-home-landing2.vercel.app */}
       <section className="features-showcase-section">
         <div className="container">
-          <div className="features-showcase-header">
+          <div className="features-showcase-header scroll-reveal">
             <div className="features-showcase-badge">⚡ FITUR UNGGULAN</div>
             <h2 className="features-showcase-title">Teknologi Terdepan untuk Rumah Anda</h2>
             <p className="features-showcase-subtitle">
@@ -284,7 +284,7 @@ export default function About() {
           </div>
           
           <div className="features-showcase-grid">
-            <div className="feature-showcase-card fade-in">
+            <div className="feature-showcase-card scroll-reveal-scale scroll-reveal-delay-1">
               <div className="feature-showcase-icon">🤖</div>
               <h3>AI-Powered Automation</h3>
               <p>Sistem AI yang belajar dari kebiasaan Anda dan mengotomatisasi rutinitas harian untuk efisiensi maksimal.</p>
@@ -300,7 +300,7 @@ export default function About() {
               </div>
             </div>
             
-            <div className="feature-showcase-card fade-in">
+            <div className="feature-showcase-card scroll-reveal-scale scroll-reveal-delay-2">
               <div className="feature-showcase-icon">🔗</div>
               <h3>Blockchain Security</h3>
               <p>Keamanan tingkat enterprise dengan teknologi blockchain untuk melindungi data dan privasi Anda.</p>
@@ -316,7 +316,7 @@ export default function About() {
               </div>
             </div>
             
-            <div className="feature-showcase-card fade-in">
+            <div className="feature-showcase-card scroll-reveal-scale scroll-reveal-delay-3">
               <div className="feature-showcase-icon">🌐</div>
               <h3>Global Connectivity</h3>
               <p>Konektivitas global dengan infrastruktur cloud terdistribusi untuk akses dari mana saja di dunia.</p>
@@ -332,7 +332,7 @@ export default function About() {
               </div>
             </div>
             
-            <div className="feature-showcase-card fade-in">
+            <div className="feature-showcase-card scroll-reveal-scale scroll-reveal-delay-4">
               <div className="feature-showcase-icon">📱</div>
               <h3>Mobile-First Design</h3>
               <p>Antarmuka mobile yang intuitif dan responsif untuk kontrol rumah dari smartphone Anda.</p>
@@ -354,7 +354,7 @@ export default function About() {
       {/* Customer Testimonials - New from smart-home-landing2.vercel.app */}
       <section className="testimonials-section">
         <div className="container">
-          <div className="testimonials-header">
+          <div className="testimonials-header scroll-reveal">
             <div className="testimonials-badge">💬 TESTIMONI</div>
             <h2 className="testimonials-title">Apa Kata Pelanggan Kami</h2>
             <p className="testimonials-subtitle">
@@ -363,7 +363,7 @@ export default function About() {
           </div>
           
           <div className="testimonials-grid">
-            <div className="testimonial-card fade-in">
+            <div className="testimonial-card scroll-reveal-bounce scroll-reveal-delay-1">
               <div className="testimonial-content">
                 <p>"Sistem smart home ini benar-benar mengubah cara kami hidup. Sekarang rumah kami lebih aman, efisien, dan nyaman."</p>
               </div>
@@ -377,7 +377,7 @@ export default function About() {
               </div>
             </div>
             
-            <div className="testimonial-card fade-in">
+            <div className="testimonial-card scroll-reveal-bounce scroll-reveal-delay-2">
               <div className="testimonial-content">
                 <p>"AI assistant-nya sangat pintar! Belajar dengan cepat dan sekarang benar-benar memahami kebiasaan keluarga kami."</p>
               </div>
@@ -391,7 +391,7 @@ export default function About() {
               </div>
             </div>
             
-            <div className="testimonial-card fade-in">
+            <div className="testimonial-card scroll-reveal-bounce scroll-reveal-delay-3">
               <div className="testimonial-content">
                 <p>"Tagihan listrik turun 30% setelah menggunakan sistem ini. Investasi yang sangat worth it untuk jangka panjang."</p>
               </div>
@@ -411,7 +411,7 @@ export default function About() {
       {/* Interactive Tabs Section */}
       <section className="tabs-section">
         <div className="tabs-container">
-          <div className="tabs-header">
+          <div className="tabs-header scroll-reveal">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
@@ -423,7 +423,7 @@ export default function About() {
               </button>
             ))}
           </div>
-          <div className="tab-content-container">
+          <div className="tab-content-container scroll-reveal scroll-reveal-delay-1">
             <h2>{tabContent[activeTab].title}</h2>
             {tabContent[activeTab].content}
           </div>
@@ -438,7 +438,7 @@ export default function About() {
 
       {/* CTA Section */}
       <section className="about-cta">
-        <div className="cta-content">
+        <div className="cta-content scroll-reveal">
           <h2>Siap Memulai Perjalanan Smart Home Anda?</h2>
           <p>Bergabunglah dengan ribuan keluarga yang telah merasakan kemudahan dan kenyamanan smart home.</p>
           <div className="cta-buttons">

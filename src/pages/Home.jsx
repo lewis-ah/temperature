@@ -69,14 +69,14 @@ export default function Home() {
       {/* Hero Section */}
       <section className={`hero-section ${isVisible ? 'visible' : ''}`}>
         <div className="hero-content">
-          <div className="hero-badge">
+          <div className="hero-badge scroll-reveal-fast">
             ✨ Platform Smart Home Terdepan di Indonesia
           </div>
-          <h1 className="hero-title">
+          <h1 className="hero-title scroll-reveal">
             Masa Depan <span className="gradient-text">Rumah Anda</span>,<br />
             Hari Ini
           </h1>
-          <p className="hero-subtitle">
+          <p className="hero-subtitle scroll-reveal scroll-reveal-delay-1">
             Sistem smart home yang cerdas, aman, dan terintegrasi penuh untuk gaya hidup yang<br />
             lebih mudah dan efisien. Kendalikan semuanya hanya dengan satu sentuhan.
           </p>
@@ -107,7 +107,7 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="hero-buttons">
+          <div className="hero-buttons scroll-reveal scroll-reveal-delay-2">
             <button className="cta-button primary">
               <span>Mulai Petualangan Anda</span>
               <div className="button-glow"></div>
@@ -120,7 +120,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <div className="hero-visual">
+        <div className="hero-visual scroll-reveal-right scroll-reveal-delay-3">
           <div className="central-hub">
             <div className="hub-core">
               <div className="pulse-ring"></div>
@@ -153,7 +153,7 @@ export default function Home() {
       <section className="stats-section">
         <div className="stats-grid">
           {stats.map((stat, index) => (
-            <div key={index} className="stat-card">
+            <div key={index} className={`stat-card scroll-reveal-stagger scroll-reveal-delay-${index + 1}`}>
               <div className="stat-number">{stat.number}</div>
               <div className="stat-label">{stat.label}</div>
             </div>
@@ -163,7 +163,7 @@ export default function Home() {
 
       {/* Features Section */}
       <section className="features-section">
-        <div className="section-header">
+        <div className="section-header scroll-reveal">
           <h2 className="section-title">
             Fitur-Fitur <span className="gradient-text">Unggulan</span>
           </h2>
@@ -176,7 +176,7 @@ export default function Home() {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className={`feature-card ${activeFeature === index ? 'highlighted' : ''}`}
+              className={`feature-card scroll-reveal-scale scroll-reveal-delay-${index + 1} ${activeFeature === index ? 'highlighted' : ''}`}
               onMouseEnter={() => setActiveFeature(index)}
             >
               <div className="feature-header">
@@ -211,7 +211,7 @@ export default function Home() {
       {/* Innovation Section */}
       <section className="innovation-section">
         <div className="innovation-content">
-          <div className="section-header">
+          <div className="section-header scroll-reveal">
             <h2 className="section-title">
               Inovasi <span className="gradient-text">Terdepan</span>
             </h2>
@@ -220,22 +220,22 @@ export default function Home() {
             </p>
           </div>
           <div className="innovation-grid">
-            <div className="innovation-card">
+            <div className="innovation-card scroll-reveal-bounce scroll-reveal-delay-1">
               <div className="innovation-icon">🔗</div>
               <h3>Blockchain Integration</h3>
               <p>Keamanan tingkat enterprise dengan teknologi blockchain terdesentralisasi untuk melindungi data IoT Anda.</p>
             </div>
-            <div className="innovation-card">
+            <div className="innovation-card scroll-reveal-bounce scroll-reveal-delay-2">
               <div className="innovation-icon">🤖</div>
               <h3>AI-Powered Analytics</h3>
               <p>Analisis cerdas berbasis AI untuk optimasi konsumsi energi dan prediksi maintenance perangkat.</p>
             </div>
-            <div className="innovation-card">
+            <div className="innovation-card scroll-reveal-bounce scroll-reveal-delay-3">
               <div className="innovation-icon">⚡</div>
               <h3>Real-time Processing</h3>
               <p>Pemrosesan data real-time dengan latensi ultra-rendah untuk respons sistem yang instantaneous.</p>
             </div>
-            <div className="innovation-card">
+            <div className="innovation-card scroll-reveal-bounce scroll-reveal-delay-4">
               <div className="innovation-icon">🌐</div>
               <h3>Global Connectivity</h3>
               <p>Konektivitas global melalui infrastruktur cloud terdistribusi di seluruh dunia.</p>
@@ -246,7 +246,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="final-cta-section">
-        <div className="cta-content">
+        <div className="cta-content scroll-reveal">
           <h2>Siap untuk Mengubah Rumah Anda?</h2>
           <p>Bergabunglah dengan ribuan keluarga yang telah merasakan kemudahan smart home.</p>
           <button className="cta-button primary large">
@@ -254,16 +254,16 @@ export default function Home() {
             <div className="button-glow"></div>
           </button>
         </div>
-        <div className="cta-visual">
-          <div className="floating-card card-1">
+        <div className="cta-visual scroll-reveal-right">
+          <div className="floating-card card-1 scroll-reveal-zoom scroll-reveal-delay-1">
             <div className="card-icon">📱</div>
             <div className="card-text">Mobile Control</div>
           </div>
-          <div className="floating-card card-2">
+          <div className="floating-card card-2 scroll-reveal-zoom scroll-reveal-delay-2">
             <div className="card-icon">🎭</div>
             <div className="card-text">Scene Mode</div>
           </div>
-          <div className="floating-card card-3">
+          <div className="floating-card card-3 scroll-reveal-zoom scroll-reveal-delay-3">
             <div className="card-icon">🔒</div>
             <div className="card-text">Secure Lock</div>
           </div>
