@@ -81,16 +81,28 @@
 }
 
 .company-logo {
-  width: 50px;
-  height: 50px;
-  background: var(--footer-gradient);
+  width: 60px;
+  height: 60px;
+  background: transparent;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
   flex-shrink: 0;
-  box-shadow: 0 4px 12px rgba(98, 126, 234, 0.3);
+  padding: 8px;
+  transition: var(--footer-transition);
+}
+
+.company-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  transition: var(--footer-transition);
+}
+
+.company-card:hover .company-logo-img {
+  transform: scale(1.05);
 }
 
 .company-info h4 {
@@ -213,6 +225,17 @@
   border-color: var(--footer-accent);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(98, 126, 234, 0.4);
+}
+
+.social-icon-img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  transition: var(--footer-transition);
+}
+
+.social-link:hover .social-icon-img {
+  transform: scale(1.1);
 }
 
 /* Footer Sections */
@@ -425,9 +448,8 @@
   }
   
   .company-logo {
-    width: 60px;
-    height: 60px;
-    font-size: 1.75rem;
+    width: 70px;
+    height: 70px;
   }
   
   .social-links {

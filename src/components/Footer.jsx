@@ -3,6 +3,24 @@ import { Link } from 'react-router-dom';
 import Logo from './Logo';
 import './Footer.css';
 
+// Import logo images
+import appleLogo from '../assets/apple.png';
+import googleLogo from '../assets/google.png';
+import microsoftLogo from '../assets/microsoft.png';
+import amazonLogo from '../assets/amazon.png';
+import jpmorganLogo from '../assets/jpmorgan.png';
+import goldmansachsLogo from '../assets/goldmansachs.png';
+import teslaLogo from '../assets/tesla.png';
+import ibmLogo from '../assets/ibm.png';
+
+// Import social media icons
+import xIcon from '../assets/x.png';
+import discordIcon from '../assets/discord.png';
+import githubIcon from '../assets/github.png';
+import linkedinIcon from '../assets/linkedin.png';
+import youtubeIcon from '../assets/youtube.png';
+import telegramIcon from '../assets/telegram.png';
+
 export default function Footer() {
   const footerSections = [
     {
@@ -52,23 +70,23 @@ export default function Footer() {
   ];
 
  const trustedCompanies = [
-    { name: 'Google', logo: '🌐', description: 'Technology Partner' },
-    { name: 'Microsoft', logo: '🔷', description: 'Cloud Infrastructure' },
-    { name: 'Amazon', logo: '📦', description: 'IoT Platform' },
-    { name: 'Apple', logo: '🍎', description: 'HomeKit Integration' },
-    { name: 'Samsung', logo: '📱', description: 'Device Partner' },
-    { name: 'Intel', logo: '🔌', description: 'Hardware Solutions' },
-    { name: 'Tesla', logo: '⚡', description: 'Energy Systems' },
-    { name: 'IBM', logo: '💼', description: 'AI & Analytics' }
+    { name: 'Google', logo: googleLogo, description: 'Technology Partner' },
+    { name: 'Microsoft', logo: microsoftLogo, description: 'Cloud Infrastructure' },
+    { name: 'Amazon', logo: amazonLogo, description: 'IoT Platform' },
+    { name: 'Apple', logo: appleLogo, description: 'HomeKit Integration' },
+    { name: 'Goldman Sachs', logo: goldmansachsLogo, description: 'Financial Solutions' },
+    { name: 'JP Morgan', logo: jpmorganLogo, description: 'Investment Partner' },
+    { name: 'Tesla', logo: teslaLogo, description: 'Energy Systems' },
+    { name: 'IBM', logo: ibmLogo, description: 'AI & Analytics' }
   ];
 
   const socialLinks = [
-    { name: 'Twitter', icon: '🐦', url: 'https://twitter.com' },
-    { name: 'Discord', icon: '💬', url: 'https://discord.com' },
-    { name: 'GitHub', icon: '🐙', url: 'https://github.com' },
-    { name: 'LinkedIn', icon: '💼', url: 'https://linkedin.com' },
-    { name: 'YouTube', icon: '📺', url: 'https://youtube.com' },
-    { name: 'Telegram', icon: '✈️', url: 'https://telegram.org' }
+    { name: 'X (Twitter)', icon: xIcon, url: 'https://twitter.com' },
+    { name: 'Discord', icon: discordIcon, url: 'https://discord.com' },
+    { name: 'GitHub', icon: githubIcon, url: 'https://github.com' },
+    { name: 'LinkedIn', icon: linkedinIcon, url: 'https://linkedin.com' },
+    { name: 'YouTube', icon: youtubeIcon, url: 'https://youtube.com' },
+    { name: 'Telegram', icon: telegramIcon, url: 'https://telegram.org' }
   ];
 
   return (
@@ -83,7 +101,13 @@ export default function Footer() {
           <div className="companies-grid">
             {trustedCompanies.map((company, index) => (
               <div key={index} className="company-card">
-                <div className="company-logo">{company.logo}</div>
+                <div className="company-logo">
+                  <img 
+                    src={company.logo} 
+                    alt={`${company.name} logo`}
+                    className="company-logo-img"
+                  />
+                </div>
                 <div className="company-info">
                   <h4>{company.name}</h4>
                   <p>{company.description}</p>
@@ -122,7 +146,11 @@ export default function Footer() {
                     className="social-link"
                     aria-label={social.name}
                   >
-                    <span>{social.icon}</span>
+                    <img 
+                      src={social.icon} 
+                      alt={`${social.name} icon`}
+                      className="social-icon-img"
+                    />
                   </a>
                 ))}
               </div>
