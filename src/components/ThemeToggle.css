@@ -56,16 +56,16 @@
 
 /* Light mode styles */
 [data-theme="light"] .theme-toggle {
-  --hover-bg: rgba(99, 126, 234, 0.1);
+  --hover-bg: rgba(249, 115, 22, 0.1); /* orange */
   --toggle-bg: #e2e8f0;
   --toggle-thumb-bg: #ffffff;
-  --toggle-icon-color: #f59e0b;
+  --toggle-icon-color: #f97316; /* orange */
 }
 
 /* Dark mode styles */
 [data-theme="dark"] .theme-toggle {
-  --hover-bg: rgba(99, 126, 234, 0.2);
+  --hover-bg: rgba(249, 115, 22, 0.2); /* orange */
   --toggle-bg: #374151;
   --toggle-thumb-bg: #1f2937;
-  --toggle-icon-color: #fbbf24;
+  --toggle-icon-color: #fb923c; /* orange */
 }

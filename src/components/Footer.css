@@ -1,16 +1,16 @@
-/* Footer CSS inspired by Ethereum.org design */
+/* Footer CSS inspired by Ethereum.org design - Green Theme */
 :root {
-  --footer-bg: #0f0f23;
-  --footer-bg-secondary: #1a1a3a;
+  --footer-bg: #0f1f0f;
+  --footer-bg-secondary: #1a3a1a;
   --footer-border: rgba(255, 255, 255, 0.1);
   --footer-text: #ffffff;
   --footer-text-secondary: rgba(255, 255, 255, 0.7);
   --footer-text-muted: rgba(255, 255, 255, 0.5);
-  --footer-accent: #627eea;
-  --footer-accent-hover: #8b5cf6;
+  --footer-accent: #4ade80;
+  --footer-accent-hover: #22c55e;
   --footer-card-bg: rgba(255, 255, 255, 0.05);
   --footer-card-border: rgba(255, 255, 255, 0.1);
-  --footer-gradient: linear-gradient(135deg, #627eea 0%, #8b5cf6 100%);
+  --footer-gradient: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
   --footer-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   --footer-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -23,11 +23,11 @@
   --footer-text: #1e293b;
   --footer-text-secondary: rgba(30, 41, 59, 0.7);
   --footer-text-muted: rgba(30, 41, 59, 0.5);
-  --footer-accent: #3b82f6;
-  --footer-accent-hover: #6366f1;
+  --footer-accent: #22c55e;
+  --footer-accent-hover: #15803d;
   --footer-card-bg: rgba(0, 0, 0, 0.05);
   --footer-card-border: rgba(0, 0, 0, 0.1);
-  --footer-gradient: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+  --footer-gradient: linear-gradient(135deg, #22c55e 0%, #15803d 100%);
   --footer-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -91,7 +91,7 @@
 
 .company-card:hover {
   transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(34, 197, 94, 0.1);
   border-color: var(--footer-accent);
   box-shadow: var(--footer-shadow);
 }
@@ -183,11 +183,11 @@
 }
 
 .footer-logo .logo-icon svg {
-  filter: drop-shadow(0 4px 12px rgba(98, 126, 234, 0.3));
+  filter: drop-shadow(0 4px 12px rgba(34, 197, 94, 0.3));
 }
 
 .footer-logo:hover .logo-icon svg {
-  filter: drop-shadow(0 6px 16px rgba(98, 126, 234, 0.5));
+  filter: drop-shadow(0 6px 16px rgba(34, 197, 94, 0.5));
 }
 
 .footer-logo .logo-text {
@@ -244,7 +244,7 @@
   background: var(--footer-accent);
   border-color: var(--footer-accent);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(98, 126, 234, 0.4);
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.4);
 }
 
 .social-icon-img {
@@ -512,7 +512,7 @@
 @media (prefers-contrast: high) {
   :root {
     --footer-bg: #000000;
-    --footer-bg-secondary: #1a1a1a;
+    --footer-bg-secondary: #0f1f0f;
     --footer-border: rgba(255, 255, 255, 0.3);
     --footer-text-secondary: rgba(255, 255, 255, 0.9);
     --footer-text-muted: rgba(255, 255, 255, 0.8);

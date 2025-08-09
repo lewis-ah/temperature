@@ -7,56 +7,52 @@ export default function Home() {
 
   useEffect(() => {
     setIsVisible(true);
-    
-    // Auto-cycle through features
     const interval = setInterval(() => {
       setActiveFeature(prev => (prev + 1) % 4);
     }, 3000);
-    
     return () => clearInterval(interval);
   }, []);
 
   const features = [
     {
-      icon: '💡',
-      title: 'Kontrol Pencahayaan',
-      description: 'Atur pencahayaan sesuai suasana hati Anda dengan sekali sentuhan.',
-      gradient: 'linear-gradient(135deg, #ffeaa7, #fdcb6e)',
-      bgColor: 'rgba(255, 203, 110, 0.1)'
+      icon: '🌿',
+      title: 'Pengelolaan Taman Pintar',
+      description: 'Rawat taman dan tanaman Anda secara otomatis untuk lingkungan yang sehat.',
+      gradient: 'linear-gradient(135deg, #2ecc71, #27ae60)',
+      bgColor: 'rgba(39, 174, 96, 0.1)'
     },
     {
-      icon: '🛡️',
-      title: 'Keamanan Canggih',
-      description: 'Pantau rumah Anda 24/7 dengan sistem keamanan terintegrasi.',
-      gradient: 'linear-gradient(135deg, #00b894, #00cec9)',
-      bgColor: 'rgba(0, 206, 201, 0.1)'
+      icon: '🔋',
+      title: 'Energi Terbarukan',
+      description: 'Gunakan energi surya dan pantau penghematan daya secara real-time.',
+      gradient: 'linear-gradient(135deg, #27ae60, #16a085)',
+      bgColor: 'rgba(22, 160, 133, 0.1)'
     },
     {
-      icon: '⚡',
-      title: 'Manajemen Energi',
-      description: 'Monitor dan optimalisasi penggunaan energi untuk menghemat biaya belanja.',
-      gradient: 'linear-gradient(135deg, #fdcb6e, #e17055)',
-      bgColor: 'rgba(225, 112, 85, 0.1)'
+      icon: '💧',
+      title: 'Penghematan Air',
+      description: 'Monitor penggunaan air dan deteksi kebocoran secara otomatis.',
+      gradient: 'linear-gradient(135deg, #1abc9c, #16a085)',
+      bgColor: 'rgba(26, 188, 156, 0.1)'
     },
     {
-      icon: '🔧',
-      title: 'Otomatisasi Cerdas',
-      description: 'Buat skenario otomatis untuk menyesuaikan perangkat sesuai jadwal.',
-      gradient: 'linear-gradient(135deg, #a29bfe, #6c5ce7)',
-      bgColor: 'rgba(108, 92, 231, 0.1)'
+      icon: '♻️',
+      title: 'Daur Ulang Otomatis',
+      description: 'Sistem pemilahan sampah pintar untuk gaya hidup berkelanjutan.',
+      gradient: 'linear-gradient(135deg, #2ecc71, #1abc9c)',
+      bgColor: 'rgba(46, 204, 113, 0.1)'
     }
   ];
 
   const stats = [
-    { number: '10K+', label: 'Rumah Terhubung' },
-    { number: '99.9%', label: 'Uptime Terjamin' },
-    { number: '30%', label: 'Penghematan Energi' },
-    { number: '24/7', label: 'Dukungan Teknis' }
+    { number: '5K+', label: 'Rumah Ramah Lingkungan' },
+    { number: '95%', label: 'Penghematan Energi Tahunan' },
+    { number: '40%', label: 'Efisiensi Penggunaan Air' },
+    { number: '24/7', label: 'Monitoring Lingkungan' }
   ];
 
   return (
     <div className="home-container">
-      {/* Animated Background */}
       <div className="animated-bg">
         <div className="floating-shapes">
           <div className="shape shape-1"></div>
@@ -70,25 +66,25 @@ export default function Home() {
       <section className={`hero-section ${isVisible ? 'visible' : ''}`}>
         <div className="hero-content">
           <div className="hero-badge scroll-reveal-fast">
-            ✨ Platform Smart Home Terdepan di Indonesia
+            🌱 Platform Smart Eco Living Terdepan
           </div>
           <h1 className="hero-title scroll-reveal">
-            Masa Depan <span className="gradient-text">Rumah Anda</span>,<br />
-            Hari Ini
+            Masa Depan <span className="gradient-text">Hidup Hijau</span>,<br />
+            Dimulai Sekarang
           </h1>
           <p className="hero-subtitle scroll-reveal scroll-reveal-delay-1">
-            Sistem smart home yang cerdas, aman, dan terintegrasi penuh untuk gaya hidup yang<br />
-            lebih mudah dan efisien. Kendalikan semuanya hanya dengan satu sentuhan.
+            Solusi rumah pintar berbasis energi terbarukan dan teknologi ramah lingkungan.<br />
+            Hemat energi, air, dan waktu — demi bumi yang lebih baik.
           </p>
-          
-          {/* Moving House Animation */}
+
+          {/* Moving Icons Animation */}
           <div className="moving-house-animation">
             <div className="house-container">
-              <div className="house house-1">🏠</div>
-              <div className="house house-2">🏠</div>
-              <div className="house house-3">🏠</div>
-              <div className="house house-4">🏠</div>
-              <div className="house house-5">🏠</div>
+              <div className="house house-1">🏡</div>
+              <div className="house house-2">🏡</div>
+              <div className="house house-3">🏡</div>
+              <div className="house house-4">🏡</div>
+              <div className="house house-5">🏡</div>
             </div>
             <div className="connection-network">
               <div className="connection-line line-1"></div>
@@ -98,22 +94,22 @@ export default function Home() {
               <div className="connection-line line-5"></div>
             </div>
             <div className="floating-devices">
-              <div className="device device-1">💡</div>
-              <div className="device device-2">🔒</div>
-              <div className="device device-3">🌡️</div>
+              <div className="device device-1">🌿</div>
+              <div className="device device-2">💧</div>
+              <div className="device device-3">🔋</div>
               <div className="device device-4">📱</div>
-              <div className="device device-5">🔋</div>
-              <div className="device device-6">📡</div>
+              <div className="device device-5">♻️</div>
+              <div className="device device-6">☀️</div>
             </div>
           </div>
-          
+
           <div className="hero-buttons scroll-reveal scroll-reveal-delay-2">
             <button className="cta-button primary">
-              <span>Mulai Petualangan Anda</span>
+              <span>Mulai Hidup Hijau</span>
               <div className="button-glow"></div>
             </button>
             <button className="cta-button secondary">
-              <span>Lihat Demo</span>
+              <span>Lihat Solusi</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                 <path d="M8 5V19L19 12L8 5Z" fill="currentColor"/>
               </svg>
@@ -124,7 +120,7 @@ export default function Home() {
           <div className="central-hub">
             <div className="hub-core">
               <div className="pulse-ring"></div>
-              <div className="hub-icon">🏠</div>
+              <div className="hub-icon">🌎</div>
             </div>
             <div className="connecting-lines">
               {features.map((_, index) => (
@@ -165,10 +161,10 @@ export default function Home() {
       <section className="features-section">
         <div className="section-header scroll-reveal">
           <h2 className="section-title">
-            Fitur-Fitur <span className="gradient-text">Unggulan</span>
+            Fitur <span className="gradient-text">Hijau Unggulan</span>
           </h2>
           <p className="section-subtitle">
-            Teknologi terdepan untuk rumah masa depan Anda
+            Inovasi ramah lingkungan untuk rumah masa depan
           </p>
         </div>
         
@@ -205,68 +201,6 @@ export default function Home() {
               ></div>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Innovation Section */}
-      <section className="innovation-section">
-        <div className="innovation-content">
-          <div className="section-header scroll-reveal">
-            <h2 className="section-title">
-              Inovasi <span className="gradient-text">Terdepan</span>
-            </h2>
-            <p className="section-subtitle">
-              Teknologi blockchain dan IoT terintegrasi untuk masa depan yang lebih baik
-            </p>
-          </div>
-          <div className="innovation-grid">
-            <div className="innovation-card scroll-reveal-bounce scroll-reveal-delay-1">
-              <div className="innovation-icon">🔗</div>
-              <h3>Blockchain Integration</h3>
-              <p>Keamanan tingkat enterprise dengan teknologi blockchain terdesentralisasi untuk melindungi data IoT Anda.</p>
-            </div>
-            <div className="innovation-card scroll-reveal-bounce scroll-reveal-delay-2">
-              <div className="innovation-icon">🤖</div>
-              <h3>AI-Powered Analytics</h3>
-              <p>Analisis cerdas berbasis AI untuk optimasi konsumsi energi dan prediksi maintenance perangkat.</p>
-            </div>
-            <div className="innovation-card scroll-reveal-bounce scroll-reveal-delay-3">
-              <div className="innovation-icon">⚡</div>
-              <h3>Real-time Processing</h3>
-              <p>Pemrosesan data real-time dengan latensi ultra-rendah untuk respons sistem yang instantaneous.</p>
-            </div>
-            <div className="innovation-card scroll-reveal-bounce scroll-reveal-delay-4">
-              <div className="innovation-icon">🌐</div>
-              <h3>Global Connectivity</h3>
-              <p>Konektivitas global melalui infrastruktur cloud terdistribusi di seluruh dunia.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="final-cta-section">
-        <div className="cta-content scroll-reveal">
-          <h2>Siap untuk Mengubah Rumah Anda?</h2>
-          <p>Bergabunglah dengan ribuan keluarga yang telah merasakan kemudahan smart home.</p>
-          <button className="cta-button primary large">
-            <span>Mulai Konsultasi Gratis</span>
-            <div className="button-glow"></div>
-          </button>
-        </div>
-        <div className="cta-visual scroll-reveal-right">
-          <div className="floating-card card-1 scroll-reveal-zoom scroll-reveal-delay-1">
-            <div className="card-icon">📱</div>
-            <div className="card-text">Mobile Control</div>
-          </div>
-          <div className="floating-card card-2 scroll-reveal-zoom scroll-reveal-delay-2">
-            <div className="card-icon">🎭</div>
-            <div className="card-text">Scene Mode</div>
-          </div>
-          <div className="floating-card card-3 scroll-reveal-zoom scroll-reveal-delay-3">
-            <div className="card-icon">🔒</div>
-            <div className="card-text">Secure Lock</div>
-          </div>
         </div>
       </section>
     </div>
